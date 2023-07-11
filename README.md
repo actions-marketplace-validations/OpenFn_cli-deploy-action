@@ -8,7 +8,7 @@ It depends on an repository containing the following
 2. A `project.yaml` file detailing a project its workflows, edges and triggers 
 3. A `config.json` file detailing a connection to a Lightning instance
 
-Additionally one needs to pass in their API to the action as an input best way to do this would be through 
+Additionally one needs to pass in their OPENFN API KEY to the action as an input best way to do this would be through 
 an input. The required key is `secret_input`
 
 See an example project structure [here](https://github.com/OpenFn/dummy-deploy-test)
@@ -23,7 +23,7 @@ jobs:
     name: A job to say hello
     steps:
       - name: Attempt Release 1
-        uses: zacck/test-action@v0.1.9 
+        uses: openfn/test-action@v0.1.9 
         with: 
           secret_input: ${{ secrets.OPENFN_API_KEY }}
 ```
