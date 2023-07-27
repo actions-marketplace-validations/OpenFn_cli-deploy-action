@@ -15,14 +15,17 @@ See an example project structure [here](https://github.com/OpenFn/dummy-deploy-t
 
 An example of how to use this action in workflow 
 ```
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  hello_world_job:
+  deploy-to-lightning:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Deploy this project to OpenFn/Lightning
     steps:
-      - name: Attempt Release 1
+      - name: Deploy to Lightning
         uses: openfn/deploy-action@v0.1.9 
         with: 
           secret_input: ${{ secrets.OPENFN_API_KEY }}
