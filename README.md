@@ -23,7 +23,7 @@ jobs:
     name: A job to say hello
     steps:
       - name: Attempt Release 1
-        uses: openfn/test-action@v0.1.9 
+        uses: openfn/deploy-action@v0.1.9 
         with: 
           secret_input: ${{ secrets.OPENFN_API_KEY }}
 ```
