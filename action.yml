@@ -1,4 +1,7 @@
-name: 'Deploy yaml'
+name: 'openfn deploy'
+branding:
+  icon: 'upload'
+  color: 'purple'
 description: 'Deploys a yaml file to a Lightning instance'
 inputs:
   secret_input:
@@ -19,5 +22,3 @@ runs:
       shell: bash
       env: 
         OPENFN_API_KEY: ${{ inputs.secret_input }}
-
-        
