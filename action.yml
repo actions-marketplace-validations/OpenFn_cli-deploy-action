@@ -22,3 +22,7 @@ runs:
       shell: bash
       env: 
         OPENFN_API_KEY: ${{ inputs.secret_input }}
+    - name: Commit updated state file
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with: 
+        commit_message: Changes accepted by Lightning; updated current project state
